@@ -101,11 +101,11 @@ const addValues = (arr, value) => {
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  let modifiedArray= [];
+  // let modifiedArray= [];
   for (let index = 0; index < times; index++) {
-    modifiedArray = callback(arr,num);
+     callback(arr,num);
   }
-  return modifiedArray;
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,20 +128,16 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   let groceryList = [];
-  
-
+  availableItems.forEach( function(value){
+    if(value.available){
+      groceryList.push(value.name);
+    }
+  }
+  );
+  return groceryList;
 
 };
-//const createList = (availableItems) => {
-//   // Solution code here...
-//   let groceryList = [];
-//   availableItems.forEach(item => {
-//     if (item.available == true) {
-//       groceryList.push(item)
-//     }
-//   })
-//   return groceryList;
-// };
+
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
 
@@ -157,8 +153,24 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
-};
+  let outputArray = [];
+  arr.forEach(function (value) {
+  
+    if(value%5 == 0 && value%3 == 0 ){
+      outputArray.push('Fizz Buzz');
+    } else if (value%5 == 0  ){
+      outputArray.push('Buzz');
+    }
+     else if(value%3 == 0 ){
+      outputArray.push('Fizz');
+    }
+    else {
+      outputArray.push(value);
+    }
+  });
+  return outputArray;
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
