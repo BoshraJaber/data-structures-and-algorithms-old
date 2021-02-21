@@ -54,6 +54,7 @@ let characters = [
   }
 ];
 
+
 const sortByChildren = (charArray) => {
   charArray.sort((a, b) => {
     if (a.children.length > b.children.length) {
@@ -74,6 +75,7 @@ const sortByChildren = (charArray) => {
 
   return charArray;
 };
+  
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -87,11 +89,12 @@ const courseInfo = {
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
+
 let resultArray = [];
 const getCourseKeys = (obj) => {
   // Object.keys(obj).forEach( property => {
   //   return obj[property]
-    // console.log(property, person[property]);
+  // console.log(property, person[property]);
   // });
   return Object.keys(obj);
 };
@@ -127,8 +130,15 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
+let arr = [];
+
 const updateNumbers = (obj) => {
-  return Object.values(obj);
+  for (let property in obj) {
+    arr.push(property + ": " + obj[property])
+    // console.log(property +":"+ obj[property]);
+  }
+  return arr;
+  // return Object.values(obj);
 };
 
 
@@ -141,12 +151,11 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-
   Object.values(characters).forEach(value => {
     houses.push(value.house);
-  // console.log(value.house);
-});
-  
+    // console.log(value.house);
+  });
+
   return houses;
 };
 
@@ -163,7 +172,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  
 
 };
 
