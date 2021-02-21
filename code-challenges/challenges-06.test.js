@@ -172,9 +172,15 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
+  Object.values(person).forEach(value => {
+    console.log(value); })
   
+  // return Object.values(arr.children).includes(character);
 
 };
+
+//
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
