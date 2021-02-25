@@ -51,7 +51,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   let purchase = arr.reduce( (accumulator,purchasePerItem) =>{
-    accumulator +  purchasePerItem.purchasePrice;
+    accumulator[purchasePerItem.purchasePrice] +=  accumulator[purchasePerItem.purchasePrice];
     return accumulator;
   }
   )
@@ -68,9 +68,11 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
-  //----
-};
+  let sum = arr.reduce(function(accumulator, value, idx){
+    return idx+1
+  })
+  return sum
+ };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -129,8 +131,15 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // Solution code here...
+  let array = [];
+   let folks = arr.reduce( (accumulator, person, idx) => {
+     console.log(accumulator[person.name])
+  // array.push(accumulator[person.name])
+    return accumulator;
+  }, {} );
+  return folks
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -141,9 +150,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  let reverse = str.split("").reduce((accumulator, value) => [value].concat(accumulator), [])
+    // accumulator[idx]= accumulator[-idx],
+    // // return accumulator
+  return reverse.join("")
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
