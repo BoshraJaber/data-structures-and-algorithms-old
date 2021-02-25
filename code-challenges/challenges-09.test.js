@@ -18,8 +18,14 @@ Becomes:
 ]
 ------------------------------------------------------------------------------------------------ */
 
+
 function transformToLis(obj){
-  let keyValueArr = [];
+  let keyValueArr = Object.entries(obj).reduce((a,b, idx)=> {
+    a[idx]=  "<li>" + Object.keys(obj)[idx]+ ": " +Object.values(obj)[idx]+ "</li>";
+    return a;
+  }, [])
+ 
+  return keyValueArr
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,16 +54,16 @@ Write a function named addPurchases that, given an array of objects as input, us
 }
 
 ------------------------------------------------------------------------------------------------ */
-
 const addPurchases = (arr) => {
-  let purchase = arr.reduce( (accumulator,purchasePerItem) =>{
-    accumulator[purchasePerItem.purchasePrice] +=  accumulator[purchasePerItem.purchasePrice];
-    return accumulator;
-  }
-  )
-  return purchase;
+  // let purchase = arr.reduce( (accumulator,purchasePerItem) =>{
+  //   console.log(purchasePerItem.purchasePrice )
+  //   accumulator +=  purchasePerItem.purchasePrice;
+  //   return accumulator;
+  
+  let result =  arr.reduce((a, b) => (a= a+ b.purchasePrice),0);
+  // return Object.values(result)
+  return result;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -131,14 +137,13 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  let array = [];
-   let folks = arr.reduce( (accumulator, person, idx) => {
-     console.log(accumulator[person.name])
-  // array.push(accumulator[person.name])
-    return accumulator;
-  }, {} );
-  return folks
+  let results = arr.reduce( (a , b) => {
+    a.push(b.name)
+   return a;
+ },[] );
+ return results
 };
+
 
 
 /* ------------------------------------------------------------------------------------------------
