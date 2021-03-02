@@ -64,8 +64,14 @@ For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
 const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-};
+  return  arr.map((value)=>{
+     let x=  value.split("(").join("").split(")").join("").split("-").join("").split(" ").join("")
+     console.log(x)
+     return x
+   })
+   
+ };
+ 
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
@@ -76,18 +82,31 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let arr = str.split('')
+  let oddArr = [];
+  // console.log(arr)
+  for(let i = 0; i< arr.length;  i += 2){
+    // console.log(i)
+    oddArr.push(arr[i+1])
+  }
+  return oddArr.join('')
+    
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
 
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
-
 const allHappy = (arr) => {
-  // Solution code here...
+  let result =  arr.map((value) =>{
+    // console.log(typeof value)
+    return value.includes(':)')
+    // })
+ 
+  },0)
+ return result.every(Boolean)
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
