@@ -26,8 +26,16 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  arr.split("")
+  return arr.reduce((acc, value, idx)=>{
+    // console.log( value.split("")[0])
+   acc.push(value[0])
+  //  console.log(acc)
+    return acc
+  }
+    ,[])
+   
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,7 +46,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  return arr.reduce((acc, value, idx)=>{
+    // console.log(value.includes(":)"))
+    if(value.includes(":)")){
+      acc.push(value)
+    }
+  return acc
+   } ,[])
 };
 
 /* ------------------------------------------------------------------------------------------------
