@@ -14,7 +14,6 @@ const longestString = (arr) => {
        }
     } 
     return arr.indexOf(longest);
-   //  return longest;
  
  };
 /* ------------------------------------------------------------------------------------------------
@@ -27,12 +26,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   return arr.reduce((acc, value, idx)=>{
-    // console.log( value.split("")[0])
    acc.push(value[0])
-  //  console.log(acc)
     return acc
-  }
-    ,[])
+  },[])
    
 };
 
