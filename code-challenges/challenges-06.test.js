@@ -259,47 +259,47 @@ Run your tests from the console: jest challenges-06.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Testing challenge 1', () => {
-//   test('It should sort the characters by number of children', () => {
-//     expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
-//     expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
-//   });
-// });
+describe('Testing challenge 1', () => {
+  test('It should sort the characters by number of children', () => {
+    expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
+    expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
+  });
+});
 
-// describe('Testing challenge 2', () => {
-//   test('It should return the keys from an object', () => {
-//     expect(getCourseKeys(courseInfo)).toStrictEqual(['name', 'duration', 'topics', 'finalExam']);
-//   });
-// });
+describe('Testing challenge 2', () => {
+  test('It should return the keys from an object', () => {
+    expect(getCourseKeys(courseInfo)).toStrictEqual(['name', 'duration', 'topics', 'finalExam']);
+  });
+});
 
-// describe('Testing challenge 3', () => {
-//   test('It should return true if the value is in the object', () => {
-//     expect(checkValues({ class: '301' }, '301')).toBe(true);
-//   });
+describe('Testing challenge 3', () => {
+  test('It should return true if the value is in the object', () => {
+    expect(checkValues({ class: '301' }, '301')).toBe(true);
+  });
 
-//   test('It should return false if the value is not in the object', () => {
-//     expect(checkValues({ class: '301' }, '401')).toBe(false);
-//   });
-// });
+  test('It should return false if the value is not in the object', () => {
+    expect(checkValues({ class: '301' }, '401')).toBe(false);
+  });
+});
 
-// describe('Testing challenge 4', () => {
-//   test('It should return an an array of names and numbers', () => {
-//     const startingObj = {
-//       'Grace Hopper': '222-303-5938',
-//       'Ada Lovelace': '222-349-9842',
-//       'Alan Turing': '222-853-5933'
-//     }
+describe('Testing challenge 4', () => {
+  test('It should return an an array of names and numbers', () => {
+    const startingObj = {
+      'Grace Hopper': '222-303-5938',
+      'Ada Lovelace': '222-349-9842',
+      'Alan Turing': '222-853-5933'
+    }
 
-//     expect(updateNumbers(startingObj).includes('Grace Hopper: 222-303-5938')).toBe(true);
-//   });
-// });
+    expect(updateNumbers(startingObj).includes('Grace Hopper: 222-303-5938')).toBe(true);
+  });
+});
 
-// describe('Testing challenge 5', () => {
-//   test('It should return an array of the names of the houses', () => {
-//     expect(getHouses(characters)[0]).toStrictEqual('Greyjoy');
-//     expect(getHouses(characters).length).toStrictEqual(7);
-//   });
-// });
+describe('Testing challenge 5', () => {
+  test('It should return an array of the names of the houses', () => {
+    expect(getHouses(characters)[0]).toStrictEqual('Greyjoy');
+    expect(getHouses(characters).length).toStrictEqual(7);
+  });
+});
 
 
 describe('Testing challenge 6', () => {
