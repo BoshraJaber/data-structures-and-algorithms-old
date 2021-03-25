@@ -26,8 +26,6 @@ const typeNum = (arr) => {
   });
   return numberArray;
 };
-
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -73,7 +71,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // let regex =/(o)*/g
-  let regex = /[aeiou]/i
+  let regex = /[aeiou]/i;
   let vowelArray = arr.filter( function(n,i) {
 
     return regex.test(n);
