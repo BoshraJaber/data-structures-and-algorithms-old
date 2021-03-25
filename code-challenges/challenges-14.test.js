@@ -186,9 +186,32 @@ Here is a sample board:
 ];
 ------------------------------------------------------------------------------------------------ */
 
+function helper(a, b, c) {
+  return a == b && b == c && a != '';
+}
+
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  for (let i = 0; i < 3; i++) {
+    // check rows:
+    if (helper(board[i][0], board[i][1], board[i][2])) {
+      return true
+    }
+    //check columns
+    else if (helper(board[0][i], board[1][i], board[2][i])) {
+      return true;
+     // check diagonals
+    } else if (helper(board[0][0], board[1][1], board[2][2]) || helper(board[2][0], board[1][1], board[0][2])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 };
+// let arr = [
+//   [ arr[0][0], arr[0][1], arr[0][2]],
+//   [ arr[1][0], arr[1][1], arr[1][2]],
+//   [ arr[2][0], arr[2][1], arr[2][2]],
+// ]
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
