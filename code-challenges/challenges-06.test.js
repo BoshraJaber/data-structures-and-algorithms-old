@@ -180,7 +180,7 @@ const hasChildrenValues = (arr, character) => {
       hasChildren = true;
     }
   }
-  return hasChildren
+  return hasChildren;
 };
 
 //
