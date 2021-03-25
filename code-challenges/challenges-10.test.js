@@ -25,9 +25,9 @@ Returns: ['dyoll', 'eimaj'];
 const getNames = (arr) => {
 
   let reversedName = arr.map((person, i) => {
-    return person.name.split("").reverse().join("")
+    return person.name.split("").reverse().join("");
   })
-  return reversedName
+  return reversedName;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -196,7 +196,7 @@ let findShortest = (data) => {
     }
 
 );
-return newArr
+return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
