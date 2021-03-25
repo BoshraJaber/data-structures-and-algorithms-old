@@ -75,9 +75,9 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   let sum = arr.reduce(function(accumulator, value, idx){
-    return idx+1
+    return idx+1;
   })
-  return sum
+  return sum;
  };
 
 /* ------------------------------------------------------------------------------------------------
@@ -141,7 +141,7 @@ const returnNames = (arr) => {
     a.push(b.name)
    return a;
  },[] );
- return results
+ return results;
 };
 
 
