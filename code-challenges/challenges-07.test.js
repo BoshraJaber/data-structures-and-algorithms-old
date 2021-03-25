@@ -52,7 +52,7 @@ const forLoopTwoToThe = (arr) => {
   for (let index = 0; index < arr.length; index++) {
     arrayOfPower.push(Math.pow(2, arr[index]))
   }
-  return arrayOfPower
+  return arrayOfPower;
 };
 
 /* ------------------------------------------------------------------------------------------------
