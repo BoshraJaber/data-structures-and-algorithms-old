@@ -12,8 +12,7 @@ const addOne = (arr) => {
   let arrayOfNum = [];
   arr.forEach(function (value) {
     arrayOfNum.push(value + 1);
-  }
-  );
+  });
   return arrayOfNum;
 };
 
@@ -29,8 +28,7 @@ const addExclamation = (arr) => {
   let arrayOfStrings = [];
   arr.forEach(function (value) {
     arrayOfStrings.push(value + '!')
-  }
-  );
+  });
   return arrayOfStrings;
 };
 
@@ -46,8 +44,7 @@ const allUpperCase = (arr) => {
   let arrayOfStrings = [];
   arr.forEach(function (value) {
     arrayOfStrings.push(value.toUpperCase())
-  }
-  );
+  });
   return arrayOfStrings;
 };
 
@@ -62,7 +59,6 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-
   let singleString = word.toUpperCase() + '!';
   return singleString;
 };
@@ -71,8 +67,7 @@ const speaker = (words, callback) => {
   let arrayOfStrings = [];
   words.forEach(function (value) {
     arrayOfStrings.push(callback(value));
-  }
-  );
+  });
   return arrayOfStrings;
 };
 
@@ -94,16 +89,12 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // arr.forEach(function(values){
   arr.push(value);
-  //   }
-  //   )
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // let modifiedArray= [];
   for (let index = 0; index < times; index++) {
-     callback(arr,num);
+    callback(arr, num);
   }
   return arr;
 };
@@ -128,14 +119,12 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   let groceryList = [];
-  availableItems.forEach( function(value){
-    if(value.available){
+  availableItems.forEach(function (value) {
+    if (value.available) {
       groceryList.push(value.name);
     }
-  }
-  );
+  });
   return groceryList;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,13 +144,13 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   let outputArray = [];
   arr.forEach(function (value) {
-  
-    if(value%5 == 0 && value%3 == 0 ){
+
+    if (value % 5 == 0 && value % 3 == 0) {
       outputArray.push('Fizz Buzz');
-    } else if (value%5 == 0  ){
+    } else if (value % 5 == 0) {
       outputArray.push('Buzz');
     }
-     else if(value%3 == 0 ){
+    else if (value % 3 == 0) {
       outputArray.push('Fizz');
     }
     else {
@@ -223,7 +212,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
