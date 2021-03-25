@@ -31,3 +31,15 @@ const insertShiftArray=(arr, value)=>{
   // [2,4,5,6,8]
   // [4,8,15,16,23,42]
 //Challenge 03:
+const BinarySearch = (sortedArr, searchKey)=>{
+    for(let i=0; i< sortedArr.length; i++){
+      if(sortedArr[i] == searchKey){
+        return i;
+      } 
+    } return -1;
+  }
+  
+  BinarySearch([1, 2, 3, 5, 6, 7], 4);
+
+  // Challenge 04:
+  
