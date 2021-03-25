@@ -75,7 +75,7 @@ const sortByChildren = (charArray) => {
 
   return charArray;
 };
-  
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -173,19 +173,14 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 
 const hasChildrenValues = (arr, character) => {
-  for(let i=0; i<arr.length ; i++){
-let x = Object.values(arr[i].children)
-   console.log(x)
-
-    if(arr[i].name == character){
-      let childrenArr = Object.values(arr[i].children);
-      
-       if(childrenArr.length > 0){
-         return true;
-       } 
+  let hasChildren = false;
+  for (let i = 0; i < arr.length; i++) {
+    let childrenArr = Object.values(arr[i].children);
+    if (arr[i].name == character && childrenArr.length > 0) {
+      hasChildren = true;
     }
   }
-
+  return hasChildren
 };
 
 //
