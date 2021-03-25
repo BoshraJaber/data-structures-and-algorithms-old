@@ -56,7 +56,7 @@ const totalSum = (matrix) => {
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
       
-      sum = sum+ matrix[i][j]
+      sum = sum+ matrix[i][j];
     }
    
   }
@@ -93,12 +93,12 @@ const grandTotal = (stores) => {
     let sum = 0;
       for (let j = 0; j < stores.length; j++){
   // console.log(stores)
-  sum = sum+ stores[j][i]
+  sum = sum+ stores[j][i];
       }
-       sumArr.push(sum)
+       sumArr.push(sum);
       // return sumArr
   }
-  return sumArr
+  return sumArr;
   
   
   };
@@ -154,14 +154,10 @@ const howManyTreats = (arr) => {
     let determineQuanitiy=  value.items.forEach((value2)=>{
       // console.log(value2)
       if(value2.name == 'Treats'){
-        // console.log(value2.quantity)
+       
         x=  value2.quantity;
-      } 
-     
-      
+      }    
     })
-    // console.log(determineQuanitiy)
-    // return determineQuanitiy
     
   })
  return x;
