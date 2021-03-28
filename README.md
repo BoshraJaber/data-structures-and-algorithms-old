@@ -5,5 +5,5 @@
 challenges and implementations :
 | Name | Link                            |
 |---------|----------------------------------|
-| Read 01 | [SMACSS and Responsive Web Design](read01.md) |
+| Code Challenge 01 | [Array Reverse](./challenges/ArrayReverse/array-reverse.js) |
 
