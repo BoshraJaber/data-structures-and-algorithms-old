@@ -10,3 +10,17 @@ The approach was to loop through the original array and push its elements in rev
 ## Solution
 White Board Image:
 ![](assets/reverse-array.png)
+
+# Shift an Array
+Add a value in the middle of an array
+
+## Challenge Description
+find the middle index of an array and add a value to it by shifting its element.
+
+## Approach & Efficiency
+The approach first was to make sure that array is not empty and the value is defined.
+Then looping through the array to find the middle index, adding the required value at this index.
+
+## Solution
+White Board Image:
+![](assets/ArrayShift.png)
