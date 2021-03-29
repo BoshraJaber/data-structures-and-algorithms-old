@@ -1,5 +1,5 @@
 const superTest = require('supertest');
-const arrayShift = require('../arrayShift/array-shift').insertShiftArray
+const insertShiftArray = require('../arrayShift/array-shift').insertShiftArray
 
 describe('Testing array shift', () => {
     test('It should add the value in the middle index', () => {
