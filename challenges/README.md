@@ -24,3 +24,16 @@ Then looping through the array to find the middle index, adding the required val
 ## Solution
 White Board Image:
 ![](assets/ArrayShift.png)
+
+# Binary Search Array
+Search for a value in an array
+
+## Challenge Description
+search for a key value in an array, when found return its index , other wise return -1
+
+## Approach & Efficiency
+The approach was to loop of the array and when an element equals the key value, return its index. In case not found, or the array is empty, or the key value is undefined, return -1.
+
+## Solution
+White Board Image:
+![](assets/BinarySearch.png)
