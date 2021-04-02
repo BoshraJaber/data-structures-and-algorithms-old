@@ -26,13 +26,13 @@ White Board Image:
 ![](assets/ArrayShift.png)
 
 # Binary Search Array
-Search for a value in an array
+Search for a value in an array using Binary search algorithm.
 
 ## Challenge Description
-search for a key value in an array, when found return its index , other wise return -1
+search for a key value in an array, when found return its index , other wise return -1 using binary search
 
 ## Approach & Efficiency
-The approach was to loop of the array and when an element equals the key value, return its index. In case not found, or the array is empty, or the key value is undefined, return -1.
+The approach was to split the array in two halves, check if the element at the middle equals the key value, if not and bigger repeat the process for the right half. If not and smaller repeat the process for the left half. Return its index if found or -1 otherwise.
 
 ## Solution
 White Board Image:
