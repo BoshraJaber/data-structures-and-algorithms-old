@@ -8,6 +8,5 @@ describe('Testing array binary search', () => {
         expect(binarySearch([], 16)).toStrictEqual(-1);
         expect(binarySearch([5,6,7,8],0)).toStrictEqual(-1);
         expect(binarySearch([-1,3,4,7],-1)).toStrictEqual(0);
-
     });
 });
