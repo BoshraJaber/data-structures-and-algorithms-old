@@ -31,25 +31,24 @@ class LinkedList {
 
         while(valueExist) {
           if(valueExist.value === value) {
-            // console.log(true);
             return true;
           }
           valueExist = valueExist.next;
         }
-        // console.log(`false`);
         return false;
     }
     toString(){
-        let linkedList;
+        // let listString= []; 
+        let listString= '';  // a string
         let currentNode = this.head;
-    
+
         while(currentNode) {
-          linkedList +=  `{${currentNode.value}} ->  `;
+            listString +=( `{ ${currentNode.value} } -> `)
           currentNode = currentNode.next;
         }
-        linkedList += "NULL";
-        console.log(linkedList);
-        return linkedList;
+        listString +="NULL";
+
+        return listString;
     }
 }
 

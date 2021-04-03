@@ -87,5 +87,6 @@ test('should return a collection of all values in the linked list', ()=>{
     ll.insert(secondValue);
     ll.insert(thirdValue);
     //assert
-    expect(ll.toString).toEqual(true);
+    console.log();
+    expect(ll.toString()).toEqual("{ 4 } -> { 3 } -> { 2 } -> NULL");
 })
