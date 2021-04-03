@@ -74,3 +74,5 @@ Creating a linked list class that can add nodes, check if a node exists and, dis
    - loop through the nodes and add their values to the empty string.
    - return the string when done looping
    - Catch an error if there is one.
+
+## [Code link](../challenges/linkedList/linked-list.js)
