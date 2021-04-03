@@ -53,8 +53,7 @@ class LinkedList {
     }
 }
 
-
-models.exports = {
-    Node = Node,
-    LinkedList = LinkedList,
+module.exports = {
+    Node : Node,
+    LinkedList : LinkedList,
 }
