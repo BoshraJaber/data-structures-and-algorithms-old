@@ -1,6 +1,6 @@
 const superTest = require('supertest');
-const Node = require("../linkedList/linked-list").Node;
-const LinkedList = require("../linkedList/linked-list").LinkedList;
+const Node = require("../Data-Structures/linkedList/linked-list").Node;
+const LinkedList = require("../Data-Structures/linkedList/linked-list").LinkedList;
 const { expect } = require('@jest/globals');
 //Required Tests:
 
@@ -89,4 +89,95 @@ test('should return a collection of all values in the linked list', ()=>{
     //assert
     console.log();
     expect(ll.toString()).toEqual("{ 4 } -> { 3 } -> { 2 } -> NULL");
+})
+// Can successfully add a node or multiple nodes to the end of the linked list
+test('should add a node to the end of the linked list', ()=>{
+    //arrange
+    let ll = new LinkedList();
+    let firstValue = 2;
+    let secondValue = 3;
+    let thirdValue = 4;
+    let value= 5;
+    // let secondValue = 7;
+   
+    //act
+    ll.insert(firstValue);
+    ll.append(value)
+    //assert
+    expect(ll.head.value).toEqual(value);
+    expect(ll.append(secondValue).value).toEqual(secondValue);
+})
+// Can successfully insert a node before a node located i the middle of a linked list
+test('should insert a node before a node located i the middle of a linked list', ()=>{
+    //arrange
+    let ll = new LinkedList();
+    let firstValue = 2;
+    let secondValue = 3;
+    let thirdValue = 1;
+    let value= 5;
+    // let secondValue = 7;
+   
+    //act
+    ll.insert(firstValue);
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    ll.insertAfter(thirdValue, value)
+    console.log(ll.toString()); 
+    //assert
+    expect(ll.head.next.value).toEqual(value);
+})
+// Can successfully insert a node before the first node of a linked list
+test('should insert a node before the first node', ()=>{
+    //arrange
+    let ll = new LinkedList();
+    let firstValue = 2;
+    let secondValue = 3;
+    let thirdValue = 1;
+    let value= 5;
+    // let secondValue = 7;
+   
+    //act
+    ll.insert(firstValue);
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    ll.insertBefore(secondValue, value)
+    console.log(ll.toString()); 
+    //assert
+    expect(ll.head.next.value).toEqual(value);
+})
+// Can successfully insert after a node in the middle of the linked list
+test('should insert after a node in the middle of the linked list', ()=>{
+    //arrange
+    let ll = new LinkedList();
+    let firstValue = 2;
+    let secondValue = 3;
+    let thirdValue = 1;
+    let value= 5;
+    // let secondValue = 7;
+   
+    //act
+    ll.insert(firstValue);
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    ll.insertAfter(secondValue, value)
+    console.log(ll.toString()); 
+    //assert
+    expect(ll.head.next.next.value).toEqual(value);
+})
+// Can successfully insert a node after the last node of the linked list
+test('should insert a node after the last node of the linked list', ()=>{
+    //arrange
+    let ll = new LinkedList();
+    let firstValue = 2;
+    let secondValue = 3;
+    let thirdValue = 1;
+    let value= 5;
+    // let secondValue = 7;
+   
+    //act
+    ll.insert(firstValue);
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    //assert
+    expect(ll.append(value).value).toEqual(value);
 })
