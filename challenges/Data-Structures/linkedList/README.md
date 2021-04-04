@@ -9,11 +9,13 @@ Creating a linked list class that can add nodes, check if a node exists and, dis
   - Searching if a value is included: O(n)
   - Printing a string of values: O(n)
   - appending a value to the tail : O(1)
+  - inserting a value before or after: O(n)
 * Big O for Space: O(1)
   - inserting a value: O(1)
   - Searching if a value is included: O(1)
   - Printing a string of values: O(1)
   - appending a value to the tail : O(1)
+  - inserting a value before or after: O(1)
 
 
 ## API
@@ -42,6 +44,17 @@ Creating a linked list class that can add nodes, check if a node exists and, dis
    - set the node to be the new tail.
    - increase the length of the list.
    - catch error if any exists.
+5. insertBefore():
+   - create a new node with the value given.
+   - start from the head node and loop over the nodes.
+   - Search for the value needed and add the new node before it.
+   - Catch error if any exists.
+6. insertAfter():
+   - create a new node with the value given.
+   - start from the head node and loop over the nodes.
+   - Search for the value needed and add the new node after it.
+   - Catch error if any exists.
+
 
 ## [Code link](./linked-list.js)
 ## [Reference1](https://daveceddia.com/linked-lists-javascript/)

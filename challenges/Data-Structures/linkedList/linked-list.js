@@ -88,16 +88,17 @@ class LinkedList {
         }
 
     }
+    // O(n) for time
+    // O(1) for space
     insertBefore(value, newVal) {
         try{
             let newNode = new Node(newVal);
             let current = this.head;
-            while(current && current.next !== null) {
+            while(current) {
               if(current.next.value === value) {
                 let node = current.next;
                 current.next = newNode;
                 newNode.next = node;
-                return;
               }
               current = current.next;
             }
@@ -115,7 +116,6 @@ class LinkedList {
                     let  node = current.next;
                     current.next = newNode;
                     newNode.next = node;
-                    return;
                 }
                 current = current.next;
             }
