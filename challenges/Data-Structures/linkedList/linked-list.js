@@ -70,6 +70,20 @@ class LinkedList {
             console.log(`Error in displaying the values in the nodes of the linked lists ${error}`);
         }
     }
+    append(value){
+        let newTail = new Node(value)
+        let previousTail = this.tail
+        // previousTail.value = this.tail.value
+
+        this.tail = value;
+        // this.tail.next = null;
+    }
+    insertBefore(value, newVal){
+
+    }
+    insertAfter(value, newVal){
+
+    }
 }
 
 module.exports = {
