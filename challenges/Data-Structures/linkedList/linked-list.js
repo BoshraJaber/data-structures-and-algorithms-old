@@ -123,9 +123,41 @@ class LinkedList {
             console.log(`Error in inserting a value after a value in the linked lists ${error}`);
         }
     }
+    kthFromEnd(k){
+        console.log('Before functions');
+        if (this.head == null) {
+            console.log("If the head is null");
+            return null;
+          } else if(k> this.length || k<0){
+            // console.log("If the lengeth is long");
+              return 'Exception';
+          } 
+          else if (this.length == k){
+              return this.head.value;
+          }
+          else{
+              let nodeOrder = this.length - k -1;
+            let current = this.head;
+              for (let i = 0; i<= nodeOrder; i++){
+                  current = current.next;
+              }
+              return current.value;
+          }
+    }
 }
 
 module.exports = {
     Node: Node,
     LinkedList: LinkedList,
 }
+
+// Count length of the linkedlist.
+// Actual Node index from head = linkedlist length - given index;
+// Write a function to travesre from head and get the node at the above index.
+
+// Input the number of nodes of the linked list.
+// Input all the nodes and create the linked list.
+// Input the Nth node to be returned from the end of the linked list.
+// Find the length of the linked list.
+// Return (length - N + 1)th node.
+
