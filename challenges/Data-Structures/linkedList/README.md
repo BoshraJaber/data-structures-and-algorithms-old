@@ -55,8 +55,11 @@ Creating a linked list class that can add nodes, check if a node exists and, dis
    - Search for the value needed and add the new node after it.
    - Catch error if any exists.
 
-
 ## [Code link](./linked-list.js)
-## [Reference1](https://daveceddia.com/linked-lists-javascript/)
-## [Reference2](https://jarednielsen.com/data-structure-linked-list-javascript/)
-https://stackoverflow.com/questions/2598348/how-to-find-nth-element-from-the-end-of-a-singly-linked-list
+* [Reference1](https://daveceddia.com/linked-lists-javascript/)
+* [Reference2](https://jarednielsen.com/data-structure-linked-list-javascript/)
+* [Reference3](https://stackoverflow.com/questions/2598348/how-to-find-nth-element-from-the-end-of-a-singly-linked-list)
+
+## White Board :
+![](./../../assets/whiteboardLinkedList.png)
+![](./../../assets/visualForLinkedList.png)

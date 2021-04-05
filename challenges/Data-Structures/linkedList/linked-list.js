@@ -91,21 +91,21 @@ class LinkedList {
     // O(n) for time
     // O(1) for space
     insertBefore(value, newVal) {
-        try{
+        try {
             let newNode = new Node(newVal);
             let current = this.head;
-            while(current) {
-              if(current.next.value === value) {
-                let node = current.next;
-                current.next = newNode;
-                newNode.next = node;
-              }
-              current = current.next;
+            while (current) {
+                if (current.next.value === value) {
+                    let node = current.next;
+                    current.next = newNode;
+                    newNode.next = node;
+                }
+                current = current.next;
             }
-          }catch (error) {
+        } catch (error) {
             console.log(`Error in inserting a value before a value in the linked lists ${error}`);
         }
-    
+
     }
     insertAfter(value, newVal) {
         try {
@@ -113,7 +113,7 @@ class LinkedList {
             let current = this.head;
             while (current) {
                 if (current.value === value) {
-                    let  node = current.next;
+                    let node = current.next;
                     current.next = newNode;
                     newNode.next = node;
                 }
@@ -123,26 +123,26 @@ class LinkedList {
             console.log(`Error in inserting a value after a value in the linked lists ${error}`);
         }
     }
-    kthFromEnd(k){
-        console.log('Before functions');
+    // Big O :
+    // O(n) for time
+    // O(n) for space
+    kthFromEnd(k) {
         if (this.head == null) {
-            console.log("If the head is null");
             return null;
-          } else if(k> this.length || k<0){
-            // console.log("If the lengeth is long");
-              return 'Exception';
-          } 
-          else if (this.length == k){
-              return this.head.value;
-          }
-          else{
-              let nodeOrder = this.length - k -1;
+        } else if (k > this.length || k < 0) {
+            return 'Exception';
+        }
+        else if (this.length == k) {
+            return this.head.value;
+        }
+        else {
+            let nodeOrder = this.length - k - 1;
             let current = this.head;
-              for (let i = 0; i<= nodeOrder; i++){
-                  current = current.next;
-              }
-              return current.value;
-          }
+            for (let i = 0; i <= nodeOrder; i++) {
+                current = current.next;
+            }
+       return current.value;
+        }
     }
 }
 
