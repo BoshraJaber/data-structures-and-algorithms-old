@@ -87,7 +87,7 @@ test('should return a collection of all values in the linked list', ()=>{
     ll.insert(secondValue);
     ll.insert(thirdValue);
     //assert
-    console.log();
+    // console.log();
     expect(ll.toString()).toEqual("{ 4 } -> { 3 } -> { 2 } -> NULL");
 })
 // Can successfully add a node or multiple nodes to the end of the linked list
@@ -122,7 +122,7 @@ test('should insert a node before a node located i the middle of a linked list',
     ll.insert(secondValue);
     ll.insert(thirdValue);
     ll.insertAfter(thirdValue, value)
-    console.log(ll.toString()); 
+    // console.log(ll.toString()); 
     //assert
     expect(ll.head.next.value).toEqual(value);
 })
@@ -141,7 +141,7 @@ test('should insert a node before the first node', ()=>{
     ll.insert(secondValue);
     ll.insert(thirdValue);
     ll.insertBefore(secondValue, value)
-    console.log(ll.toString()); 
+    // console.log(ll.toString()); 
     //assert
     expect(ll.head.next.value).toEqual(value);
 })
@@ -160,7 +160,7 @@ test('should insert after a node in the middle of the linked list', ()=>{
     ll.insert(secondValue);
     ll.insert(thirdValue);
     ll.insertAfter(secondValue, value)
-    console.log(ll.toString()); 
+    // console.log(ll.toString()); 
     //assert
     expect(ll.head.next.next.value).toEqual(value);
 })
@@ -181,3 +181,34 @@ test('should insert a node after the last node of the linked list', ()=>{
     //assert
     expect(ll.append(value).value).toEqual(value);
 })
+test('should test the kthFromEnd method ', ()=>{
+    //arrange
+    let ll = new LinkedList();
+    let llSmall = new LinkedList();
+    let firstValue = 2;
+    let secondValue = 3;
+    let thirdValue = 1;
+    let value= 5;
+    //act
+    ll.insert(firstValue);
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    llSmall.insert(firstValue)
+    //assert
+    // console.log(ll.length);
+// Where k is greater than the length of the linked list
+    expect( ll.kthFromEnd(6)).toEqual('Exception');
+// Where k and the length of the list are the same
+    expect( ll.kthFromEnd(3)).toEqual(1);
+// Where k is not a positive integer
+    expect( ll.kthFromEnd(-1)).toEqual('Exception');
+// “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
+    expect( ll.kthFromEnd(2)).toEqual(3);
+// Where the linked list is of a size 1
+     expect(llSmall.kthFromEnd(1)).toEqual(2);
+})
+
+
+
+
+
