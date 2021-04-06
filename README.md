@@ -11,7 +11,7 @@ challenges and implementations :
 | Code Challenge 05 | [Linked List](./challenges/Data-Structures/linkedList/linked-list.js) |
 | Code Challenge 06 | [Linked List insertions](./challenges/Data-Structures/linkedList/linked-list.js) |
 | Code Challenge 07 | [Linked List Kth order from end](./challenges/Data-Structures/linkedList/linked-list.js) |
-| Code Challenge 08 | [Linked List Zip](./challenges/Data-Structures/linkedList/linked-list.js) |
+| Code Challenge 08 | [Linked List Zip](./challenges/llZip/ll-zip.js) |
 
 
 ![](https://cdn.lynda.com/course/2870041/2870041-637490973662894088-16x9.jpg)
