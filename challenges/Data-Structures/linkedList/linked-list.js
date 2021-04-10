@@ -68,20 +68,21 @@ class LinkedList {
     // O(1) for time
     // O(1) for space 
     append(value) {
-        try {
+        try{
             let node = new Node(value);
-            if (!this.tail) {
-                this.head = this.tail = node;
-                return node;
+            if(!this.head){
+                this.head = node;
+            } else {
+                let currentNode = this.head;
+                while(currentNode.next) {
+                    currentNode = currentNode.next;
+                }
+                currentNode.next = node;
             }
-            this.tail.next = node;
-            this.tail = node;
             this.length++;
-            return node;
-        } catch (error) {
+          }catch (error) {
             console.log(`Error in adding a value in the end of the linked lists ${error}`);
         }
-
     }
     // O(n) for time
     // O(1) for space
