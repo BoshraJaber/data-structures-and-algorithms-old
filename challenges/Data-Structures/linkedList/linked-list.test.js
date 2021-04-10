@@ -1,9 +1,9 @@
 const superTest = require('supertest');
-const Node = require("../Data-Structures/linkedList/linked-list").Node;
-const LinkedList = require("../Data-Structures/linkedList/linked-list").LinkedList;
+const Node = require("./linked-list").Node;
+const LinkedList = require("./linked-list").LinkedList;
 const { expect } = require('@jest/globals');
 //Required Tests:
-
+console.log('oijfgdfinzznnbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb')
 
 test('init node class', () => {
     //arrange

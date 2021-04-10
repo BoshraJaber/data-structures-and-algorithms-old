@@ -150,14 +150,3 @@ module.exports = {
     Node: Node,
     LinkedList: LinkedList,
 }
-
-// Count length of the linkedlist.
-// Actual Node index from head = linkedlist length - given index;
-// Write a function to travesre from head and get the node at the above index.
-
-// Input the number of nodes of the linked list.
-// Input all the nodes and create the linked list.
-// Input the Nth node to be returned from the end of the linked list.
-// Find the length of the linked list.
-// Return (length - N + 1)th node.
-
