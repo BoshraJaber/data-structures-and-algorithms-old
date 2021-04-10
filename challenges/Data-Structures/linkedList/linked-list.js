@@ -67,6 +67,7 @@ class LinkedList {
     }
     // O(1) for time
     // O(1) for space 
+    // The approach here is to loop through the array until the last node is found, then make the last node to refer (next) to the new node, and the next value of the new node will be by default null.
     append(value) {
         try{
             let node = new Node(value);
@@ -89,6 +90,11 @@ class LinkedList {
     insertBefore(value, newVal) {
         try {
             let newNode = new Node(newVal);
+            if(this.head.value == value){
+                newNode.next = this.head;
+                this.head = newNode;
+            }
+            
             let current = this.head;
             while (current) {
                 if (current.next.value === value) {
