@@ -1,6 +1,6 @@
 
 ## Challenge
-Creating a linked list class that can add nodes, check if a node exists and, display a string of values to the nodes in this list.
+Creating a linked list class that can add nodes, check if a node exists and, display a string of values to the nodes in this list. insert a value at the end, the start, or before or after a certain value.
 
 ## Approach & Efficiency
 * The approach was to create a ES6 class for creating each node, and another class to create an empty linked list. Later, we can create instances of these to classes to complete the task given.
@@ -61,5 +61,20 @@ Creating a linked list class that can add nodes, check if a node exists and, dis
 * [Reference3](https://stackoverflow.com/questions/2598348/how-to-find-nth-element-from-the-end-of-a-singly-linked-list)
 
 ## White Board :
+
+* Append a node:
+
+![](../../assets/append-linkedlist.png)
+
+* InsertBefore :
+
+![](../../assets/insertBefore-linkedList.png)
+
+* InsertAfter :
+
+![](../../assets/insertAfter-linkedList.png)
+
+
+* Find a kth node from the end:
 ![](./../../assets/whiteboardLinkedList.png)
 ![](./../../assets/visualForLinkedList.png)
