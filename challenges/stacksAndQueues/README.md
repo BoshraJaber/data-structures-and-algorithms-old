@@ -1,3 +1,10 @@
+
+## Test:
+* `npm test stacks.test`
+* `npm test queues.test`
+
+
+
 ## Resources:
 [Reference1](https://www.javatpoint.com/ds-linked-list-implementation-of-stack)
 [Reference2](https://osgoodgunawan.medium.com/stack-and-queue-in-linkedlist-javascript-76ca86dd95fe)

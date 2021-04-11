@@ -63,10 +63,13 @@ class Queue{
         if(!this.head){
             this.head = newNode;
         } else{
-            this.tail.next = newNode;
-            this.tail = newNode;
+           let current = this.head;
+           while(current.next){
+               current = current.next;
+           }
+           current.next = newNode;
         }
-        length++;
+        this.length++;
     }
     dequeue(){
         if(!this.head){
@@ -77,14 +80,14 @@ class Queue{
             this.tail = null;
         }
         this.head = this.head.next;
-        length--;
+        this.length--;
         return removedNode.value;
     }
     peek(){
         if(!this.head){
             return 'exception';
         } else {
-            return head.value;
+            return this.head.value;
         }
     }
     isEmpty(){
