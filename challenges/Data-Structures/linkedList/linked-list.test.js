@@ -1,10 +1,8 @@
 const superTest = require('supertest');
-const Node = require("../Data-Structures/linkedList/linked-list").Node;
-const LinkedList = require("../Data-Structures/linkedList/linked-list").LinkedList;
+const Node = require("./linked-list").Node;
+const LinkedList = require("./linked-list").LinkedList;
 const { expect } = require('@jest/globals');
 //Required Tests:
-
-
 test('init node class', () => {
     //arrange
     let value = 9;
@@ -102,27 +100,29 @@ test('should add a node to the end of the linked list', ()=>{
    
     //act
     ll.insert(firstValue);
-    ll.append(value)
+    ll.insert(secondValue);
+    ll.insert(thirdValue);
+    ll.append(value);
     //assert
-    expect(ll.head.value).toEqual(value);
-    expect(ll.append(secondValue).value).toEqual(secondValue);
+    expect(ll.head.value).toEqual(thirdValue);
+    expect(ll.head.next.value).toEqual(secondValue);
+    expect(ll.head.next.next.value).toEqual(firstValue);
+    expect(ll.head.next.next.next.value).toEqual(value);
 })
 // Can successfully insert a node before a node located i the middle of a linked list
 test('should insert a node before a node located i the middle of a linked list', ()=>{
     //arrange
     let ll = new LinkedList();
-    let firstValue = 2;
-    let secondValue = 3;
+    let firstValue = 3;
+    let secondValue = 2;
     let thirdValue = 1;
     let value= 5;
-    // let secondValue = 7;
-   
     //act
     ll.insert(firstValue);
     ll.insert(secondValue);
     ll.insert(thirdValue);
-    ll.insertAfter(thirdValue, value)
-    // console.log(ll.toString()); 
+    ll.insertBefore(secondValue, value)
+    // console.log('inserting before the middle value',ll.toString()); 
     //assert
     expect(ll.head.next.value).toEqual(value);
 })
@@ -130,8 +130,8 @@ test('should insert a node before a node located i the middle of a linked list',
 test('should insert a node before the first node', ()=>{
     //arrange
     let ll = new LinkedList();
-    let firstValue = 2;
-    let secondValue = 3;
+    let firstValue = 3;
+    let secondValue = 2;
     let thirdValue = 1;
     let value= 5;
     // let secondValue = 7;
@@ -140,17 +140,17 @@ test('should insert a node before the first node', ()=>{
     ll.insert(firstValue);
     ll.insert(secondValue);
     ll.insert(thirdValue);
-    ll.insertBefore(secondValue, value)
-    // console.log(ll.toString()); 
+    ll.insertBefore(thirdValue, value)
+    // console.log('insert before the first node',ll.toString()); 
     //assert
-    expect(ll.head.next.value).toEqual(value);
+    expect(ll.head.value).toEqual(value);
 })
 // Can successfully insert after a node in the middle of the linked list
 test('should insert after a node in the middle of the linked list', ()=>{
     //arrange
     let ll = new LinkedList();
-    let firstValue = 2;
-    let secondValue = 3;
+    let firstValue = 3;
+    let secondValue = 2;
     let thirdValue = 1;
     let value= 5;
     // let secondValue = 7;
@@ -168,18 +168,21 @@ test('should insert after a node in the middle of the linked list', ()=>{
 test('should insert a node after the last node of the linked list', ()=>{
     //arrange
     let ll = new LinkedList();
-    let firstValue = 2;
-    let secondValue = 3;
-    let thirdValue = 1;
+    let firstValue = 1;
+    // let secondValue = 2;
+    // let thirdValue = 1;
     let value= 5;
     // let secondValue = 7;
    
     //act
     ll.insert(firstValue);
-    ll.insert(secondValue);
-    ll.insert(thirdValue);
+    // ll.insert(secondValue);
+    // ll.insert(thirdValue);
+    console.log('Before adding the last value',ll.toString());
+    ll.insertAfter(firstValue, value)
     //assert
-    expect(ll.append(value).value).toEqual(value);
+    console.log('after adding a last value',ll.toString()); 
+    expect(ll.toString()).toEqual('{ 1 } -> { 5 } -> NULL');
 })
 test('should test the kthFromEnd method ', ()=>{
     //arrange

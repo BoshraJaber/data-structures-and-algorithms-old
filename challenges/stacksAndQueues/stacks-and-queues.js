@@ -1,11 +1,13 @@
 'use strict';
-//Node class that has properties for the value stored in the Node, and a pointer to the next node.
-class Node {
-    constructor(value, next) {
+
+// Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
+class Node{
+    constructor(value, next){
         this.value = value;
         this.next = null;
     }
 }
+
 //LIFO: Last in from the front of the list is the first to get out.
 class Stack {
     constructor() {
@@ -105,3 +107,4 @@ module.exports = {
     stack : Stack,
     queue : Queue,
 }
+
