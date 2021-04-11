@@ -12,6 +12,8 @@ challenges and implementations :
 | Code Challenge 06 | [Linked List insertions](./challenges/Data-Structures/linkedList/linked-list.js) |
 | Code Challenge 07 | [Linked List Kth order from end](./challenges/Data-Structures/linkedList/linked-list.js) |
 | Code Challenge 08 | [Linked List Zip](./challenges/llZip/ll-zip.js) |
+| Code Challenge 10 | [Stack and a Queue Implementation](./challenges/stacksAndQueues/stacks-and-queues.js) |
+| Code Challenge 11 | [Queues with Stacks](./challenges/queueWithStacks/queue-with-stacks.js) |
 
 
 ![](https://cdn.lynda.com/course/2870041/2870041-637490973662894088-16x9.jpg)
