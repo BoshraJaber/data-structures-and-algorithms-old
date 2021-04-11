@@ -96,6 +96,7 @@ describe('Queue tests', () => {
         expect(queue.head).toBeNull();
         expect(queue.peek()).toBe('exception');
         expect(queue.dequeue()).toBe('exception');
+        expect(queue.isEmpty()).toBe(true);
     });
 
 
