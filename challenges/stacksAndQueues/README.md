@@ -29,6 +29,11 @@ The approach was to create a stack and a queue class using the linked list data 
 * `npm test stacks.test`
 * `npm test queues.test`
 
+## Code Link:
+[Stacks and Queues](./stacks-and-queues.js)
+[Stacks Tests](./stacks.test.js)
+[Queues Tests](./queues.test.js)
+
 ![](https://miro.medium.com/max/1025/0*vlO53KXIZb92-iTN.png)
 
 ## Resources:
