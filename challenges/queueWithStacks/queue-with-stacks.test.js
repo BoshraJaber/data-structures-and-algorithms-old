@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 const { expect } = require('@jest/globals');
 const Queue = require('./queue-with-stacks');
 
