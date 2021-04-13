@@ -15,5 +15,6 @@ challenges and implementations :
 | Code Challenge 10 | [Stack and a Queue Implementation](./challenges/stacksAndQueues/stacks-and-queues.js) |
 | Code Challenge 11 | [Queues with Stacks](./challenges/queueWithStacks/queue-with-stacks.js) |
 | Code Challenge 12 | [Fifo Animal Shelter](./challenges/fifoAnimalShelter/animal-shelter.js) |
+| Code Challenge 13 | [Multi Brackets Validation](./challenges/multiBracketValidation/multi-bracket-validation.js) |
 
 ![](https://cdn.lynda.com/course/2870041/2870041-637490973662894088-16x9.jpg)
