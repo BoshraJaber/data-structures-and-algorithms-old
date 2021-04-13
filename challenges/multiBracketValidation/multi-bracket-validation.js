@@ -15,7 +15,7 @@ function multiBracketValidation(input){
         if (input[i] === '(' || input[i] === '{' || input[i] === '[' ) {
             stack.push(input[i]);
         } else {
-            //3. compare the top brackets in the stack to see if it matches any of the opening brackets
+            //3. pop each bracket and check the string if its matching closing exists
             let top = stack.pop();
             if (input[i] !== closingBrackets[top]) {return false};
         }
