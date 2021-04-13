@@ -4,7 +4,7 @@ function multiBracketValidation(input){
     // 1. Remove any characters in the string
     // let regex = /\(\)|\[\]|\{\}/;  
     input =input.replace(/\w/g, "");
-    let stack = [];
+    let stack = new Stack();
     let closingBrackets = {
         '(': ')',
         '[': ']',
