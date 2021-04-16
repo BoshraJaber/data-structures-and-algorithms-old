@@ -13,3 +13,4 @@
 ## Test:
 Node Test : `npm test node.test` , [Link](node.test.js)
 Binary Tree : `npm test binaryTree.test` 
+Binary Search Tree : `npm test binarySearchTree.test`

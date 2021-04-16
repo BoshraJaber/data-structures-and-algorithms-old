@@ -67,24 +67,29 @@ class BinarySearchTree {
     }
     add(value) {
         try {
-            const newNode = new Node(value);
-            if(this.root == null) this.root = newNode;
-            // if the value equal the root
-            // if the value smaller than the root go lift
-            // if the value is greater than the root  go right
-            const _traverse = (node) => {
-                if (node == newNode.value) return 'the value already exists, please add another one';
+            const _traverse = (node, newNode) => {
+                // console.log('I am in the add    '+ node.value)
+                if (node.value == newNode.value) return 'the value already exists, please add another one';
                 if (node.value > newNode.value) {
                     if(node.left == null) node.left = newNode;
-                    _traverse(newNode.left)
+
+                    _traverse(node.left, newNode);
+                } else {
+                    if (node.value < newNode.value) {
+                        if(node.right == null) node.right = newNode;
+                        _traverse(node.right, newNode);
+                    }
                 }
-                if (node.value < node.value) {
-                    if(node.right == null) node.right = newNode;
-                    _traverse(newNode.right)
-                }
-                _traverse(this.root);
-                return;
+
             }
+            const newNode = new Node(value);
+            if(this.root == null) this.root = newNode;
+            else {
+                // console.log('hereeee     '+ this.root.value);
+                _traverse(this.root, newNode);
+                // return;
+            }
+
         } catch (error) {
             throw new Error(`Error in adding a new node to the binary tree ${error}`)
         }
@@ -106,5 +111,4 @@ module.exports = {
 
 
 
-// Define a method named add that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
 // Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
