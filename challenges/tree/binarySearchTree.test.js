@@ -36,6 +36,17 @@ describe('Binary Tree', () => {
         expect(binarySearchTree.root.left.left.value).toEqual(6);
         expect(binarySearchTree.root.right.right.value).toEqual(20);
     });
+    it('should successfully check if a tree contain a given value', () => {
+        let binarySearchTree = new BinarySearchTree(node)
+        binarySearchTree.add(7);
+        binarySearchTree.add(10);
+        binarySearchTree.add(6); 
+        binarySearchTree.add(20);
+        // console.log(binarySearchTree.contains(5));  
+        expect(binarySearchTree.contains(8)).toBeTruthy();
+        expect(binarySearchTree.contains(5)).toBeFalsy();
+
+    });
 
   });
   

@@ -96,6 +96,19 @@ class BinarySearchTree {
     }
     contains(value) {
         try {
+            let containValue = false;
+            let current = this.root;
+            while(!containValue && current){
+                if(value < current.value){
+                    current = current.left;
+                } else if (value< current.value){
+                    current = current.right;
+                }
+                else {
+                    containValue = true;
+                }
+            }
+            return containValue;
 
         } catch (error) {
             throw new Error(`Error finding the ${value} in the binary tree ${error}`)
