@@ -61,7 +61,24 @@ class BinaryTree {
     }
 
     findMaximumValue(){
-
+        try {
+            let max = 0;
+            const results = [];
+            const _traverse = (node) => {
+                if (node.left) _traverse(node.left);
+                if (node.right) _traverse(node.right);
+                results.push(node.value);
+            };
+            _traverse(this.root);
+            for (let i = 0; i < results.length; i++) {
+                if(max < results[i]){
+                    max = results[i];
+                }
+            }
+            return max;
+        } catch (error) {
+            throw new Error(`error in finding the maximum value ${error}`);
+        }
     }
 }
 
@@ -126,13 +143,29 @@ module.exports = {
     BinarySearchTree: BinarySearchTree,
 }
 
+//========================
+// let max;
+// const _getMax = (node) =>{
+//     // console.log(node)
+//      max = node
+//      if(node.right != null){
+//         let maxRight = _getMax(node.right);
+//         if(max < maxRight){
+//             max = maxRight;
+//         }
 
+//     }
+//     if(node.left != null){
+//         let maxLeft = _getMax(node.left);
+//         // console.log(''+ maxLeft);
+//         if(max < maxLeft){
+//             max = maxLeft;
+//         }
+//     }
 
-// int max = node.element;
-// if(node.left != null) {
-//     max = Math.max(max, maxElem(node.left));
+//     return max.value;
 // }
-// if(node.right != null) {
-//     max = Math.max(max, maxElem(node.right));
-// }
-// return max;
+// if(this.root == null) {
+//     throw "This is an empty tree"
+// } else _getMax(this.root)
+// return max.value
