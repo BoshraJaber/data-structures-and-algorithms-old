@@ -59,6 +59,10 @@ class BinaryTree {
             throw new Error(`error in traversing using postOrder method ${error}`);
         }
     }
+
+    findMaximumValue(){
+
+    }
 }
 
 class BinarySearchTree {
@@ -124,4 +128,11 @@ module.exports = {
 
 
 
-// Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+// int max = node.element;
+// if(node.left != null) {
+//     max = Math.max(max, maxElem(node.left));
+// }
+// if(node.right != null) {
+//     max = Math.max(max, maxElem(node.right));
+// }
+// return max;
