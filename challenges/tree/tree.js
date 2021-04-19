@@ -60,7 +60,7 @@ class BinaryTree {
         }
     }
 
-    findMaximumValue(){
+    findMaximumValue() {
         try {
             let max = 0;
             const results = [];
@@ -71,7 +71,7 @@ class BinaryTree {
             };
             _traverse(this.root);
             for (let i = 0; i < results.length; i++) {
-                if(max < results[i]){
+                if (max < results[i]) {
                     max = results[i];
                 }
             }
@@ -80,6 +80,33 @@ class BinaryTree {
             throw new Error(`error in finding the maximum value ${error}`);
         }
     }
+    breadthFirst() {
+        // Reference : https://www.educative.io/blog/tree-traversal-algorithms
+        try{
+            const results = [];
+            const rootNodes = [];
+            if (this.root == null) {
+                return 'Tree is empty'
+            } else {
+                rootNodes.push(this.root);
+                while (rootNodes.length) {
+                    const node = rootNodes.shift();
+                    if (node.left) {
+                        rootNodes.push(node.left);
+                    }
+                    if (node.right) {
+                       rootNodes.push(node.right);
+                    }
+                    results.push(node.value);
+                }
+            }
+            return results;
+        } catch (error) {
+            throw new Error(`error in traversing using breadth first method ${error}`);
+        }
+       
+    }
+
 }
 
 class BinarySearchTree {
@@ -92,19 +119,19 @@ class BinarySearchTree {
                 // console.log('I am in the add    '+ node.value)
                 if (node.value == newNode.value) return 'the value already exists, please add another one';
                 if (node.value > newNode.value) {
-                    if(node.left == null) node.left = newNode;
+                    if (node.left == null) node.left = newNode;
 
                     _traverse(node.left, newNode);
                 } else {
                     if (node.value < newNode.value) {
-                        if(node.right == null) node.right = newNode;
+                        if (node.right == null) node.right = newNode;
                         _traverse(node.right, newNode);
                     }
                 }
 
             }
             const newNode = new Node(value);
-            if(this.root == null) this.root = newNode;
+            if (this.root == null) this.root = newNode;
             else {
                 // console.log('hereeee     '+ this.root.value);
                 _traverse(this.root, newNode);
@@ -119,10 +146,10 @@ class BinarySearchTree {
         try {
             let containValue = false;
             let current = this.root;
-            while(!containValue && current){
-                if(value < current.value){
+            while (!containValue && current) {
+                if (value < current.value) {
                     current = current.left;
-                } else if (value< current.value){
+                } else if (value < current.value) {
                     current = current.right;
                 }
                 else {
@@ -139,33 +166,34 @@ class BinarySearchTree {
 
 module.exports = {
     BinaryTree: BinaryTree,
-    Node:Node,
+    Node: Node,
     BinarySearchTree: BinarySearchTree,
 }
 
+
 //========================
-// let max;
-// const _getMax = (node) =>{
-//     // console.log(node)
-//      max = node
-//      if(node.right != null){
-//         let maxRight = _getMax(node.right);
-//         if(max < maxRight){
-//             max = maxRight;
-//         }
+// breadthFirst(){
+//     const results = [];
+//     const rootNodes= [];
+//     rootNodes.push(this.root);
+//     const _traverse = (node) =>{
+//         // const node = this.queue.shift();
 
-//     }
-//     if(node.left != null){
-//         let maxLeft = _getMax(node.left);
-//         // console.log(''+ maxLeft);
-//         if(max < maxLeft){
-//             max = maxLeft;
+//         console.log('root node is      '+rootNodes)
+//         if (node.left) {
+//             console.log(node.left);
+//            this.rootNodes.push(node.left);
 //         }
+//         if (node.right) {
+//            this.rootNodes.push(node.right);
+//         }
+//         this.results.push(node.value);
+//         _traverse(rootNodes.shift())
 //     }
-
-//     return max.value;
+//     if(this.root == null){
+//         return 'Tree is empty'
+//     }else {
+//         _traverse(rootNodes[0])
+//     }
+//     return results;
 // }
-// if(this.root == null) {
-//     throw "This is an empty tree"
-// } else _getMax(this.root)
-// return max.value
