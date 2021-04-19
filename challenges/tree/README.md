@@ -52,6 +52,11 @@ Code : [Binary Tree](tree.js)
 ## Resource :
 [Binary Search Tree](https://humanwhocodes.com/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/#:~:text=The%20contains()%20method%20accepts,BinarySearchTree.)
 
-## WhiteBoard:
+## WhiteBoard for Finding the max value
 
 ![](../assets/maxTree.png)
+
+
+## WhiteBoard for traversing breadth first method:
+
+![](../assets/breadth%20first.png)

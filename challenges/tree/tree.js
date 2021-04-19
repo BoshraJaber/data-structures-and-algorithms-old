@@ -81,6 +81,7 @@ class BinaryTree {
         }
     }
     breadthFirst() {
+        // Reference : https://www.educative.io/blog/tree-traversal-algorithms
         try{
             const results = [];
             const rootNodes = [];
@@ -168,69 +169,9 @@ module.exports = {
     Node: Node,
     BinarySearchTree: BinarySearchTree,
 }
-///=========================
-// traverseBFS() {
-//     if (!this.root) return;
-//     this.queue = [];
-//     this.queue.push(this.root);
-//     this.output = [];
-//     while (this.queue.length) {
-//      
-//    }
-//===========================
-// BFS() {
-//     let visited = [],
-//         queue = [],
-//         current = this.root;
 
-//     queue.push(current);
-//     while (queue.length) {
-//       current = queue.shift();
-//       visited.push(current.val);
-
-//       if (current.left) queue.push(current.left);
-//       if (current.right) queue.push(current.right);
-//     };
-
-//       return visited;
-//   }
-
-//   console.log(tree.BFS()); //[ 20, 14, 57, 9, 19, 31, 62, 3, 11, 72 ]
 
 //========================
-// class Tree {
-//     constructor(value, left, right) {
-//       this.value = value
-//       this.left = left
-//       this.right = right
-//     }
-//   }
-
-//   const breadthFirstTraversal = (tree, callback) => {
-//     if (tree == null) {
-//       return;
-//     }
-
-//     let queue = [tree]
-
-//     while (queue.length > 0) {
-//       let item = queue.shift()
-//       let value = item.value
-//       callback(value)
-
-//       if (item.left == null && item.right == null) {
-//         continue
-//       }
-//       if (item.left != null) {
-//         queue.push(item.left)
-//       }
-//       if (item.right != null) {
-//         queue.push(item.right)
-//       }
-//     }
-//   }
-
-
 // breadthFirst(){
 //     const results = [];
 //     const rootNodes= [];
