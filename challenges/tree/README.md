@@ -2,6 +2,7 @@
 * Trees are a way to represent data in a non linear way (unlike arrays, linked lists, stacks and queues).
 * Binary trees are composed of nodes with each node only have two children the most (left and right).
 * Binary Search Tree is a sorted binary tree where the values that are smaller then the root are located to the left, while the greater values are located to hte right.
+* Breadth-First Traversing: It is traversing through the tree line by line from the root node until the leaves nodes. 
 
 
 ## Challenge
@@ -9,7 +10,8 @@ Create three classes:
 1. Node class with value, left and, right properties.
 2. Binary Tree class with preOrder, inOrder, and postOrder methods.
 3. Binary tree also have a method that return the maximum value.
-4. Binary Search Tree with add (adding a value in the right order in a tree) and contain (check if a value exists) methods
+4. Binary tree also have a method of breadth-First traversing.
+5. Binary Search Tree with add (adding a value in the right order in a tree) and contain (check if a value exists) methods
 
 ## Approach & Efficiency
 - In Binary tree: The approach was to use a private function (_traverse()) and apply it to each root node and calling it again if a condition is not matched.
@@ -43,6 +45,7 @@ Create three classes:
 Node Test : `npm test node.test`  [Link](node.test.js)
 Binary Tree : `npm test binaryTree.test`  [Link](binaryTree.test.js)
 Binary Tree Maximum Value : `npm test findMaximum.test`
+Binary Tree Breadth First Traversing: `npm test breadthFirst.test`
 Binary Search Tree : `npm test binarySearchTree.test` [Link](binarySearchTree.test.js)
 Code : [Binary Tree](tree.js)
 
