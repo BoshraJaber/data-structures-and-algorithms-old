@@ -19,6 +19,7 @@ challenges and implementations :
 | Code Challenge 15 | [Binary Tree and BST](./challenges/tree/tree.js) |
 | Code Challenge 16 | [Binary Tree Max Value](./challenges/tree/tree.js) |
 | Code Challenge 17 | [Binary Tree Breadth First Traversing](./challenges/tree/tree.js) |
+| Code Challenge 18 | [Fizz Buzz Tree](./challenges/fizzBuzzTree/fizz-buzz-tree.js) |
 
 
 ![](https://cdn.lynda.com/course/2870041/2870041-637490973662894088-16x9.jpg)
