@@ -43,7 +43,3 @@ describe('Binary Tree', () => {
     expect(typeof expected.children[5].value).toEqual('string');
   });
 });
-
-// If the value is divisible by 5, replace the value with “Buzz”
-// If the value is divisible by 3 and 5, replace the value with “”
-// If the value is not divisible by 3 or 5, simply turn the number into a String.
