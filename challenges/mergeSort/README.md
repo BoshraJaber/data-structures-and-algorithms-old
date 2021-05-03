@@ -9,21 +9,24 @@
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Merge-Sort-Tutorial.png)
 
 ## Challenge Description
-Create a function that sort by insertion.go over the output of this function step by step.
+Create a function that sort by merging sorted halves after dividing them ans sorting each half at a time.
 
 ## Approach & Efficiency
-* The approach was to loop over the array and compare the element with the element that stands before it and put the smaller one of them fist, and keep doing that until the first element is reach, keep doing that for each element in the array.
+* The approach was to Divide and Conquer, instead of sorting all of the array at once, divide it into smaller halves and sort each small half at a time, when all halves are sorted merges them in the right order of the sorting.
 * Efficiency:
  - Big O of space: O(n) 
  - Big O of time: O(nLogn) 
 
 ## Solution
 
-![](assets/../../assets/insertionSort/insertionSort.png)
+![](assets/../../assets/mergeSortExample.png)
+
+
+![](assets/../../assets/mergeSort.png)
 
 ## Resources:
-* [Insertion Sort](https://www.geeksforgeeks.org/insertion-sort/)
+* [Merge Sort](https://javascript.plainenglish.io/javascript-merge-sort-3205891ac060)
 
 ## The Code:
-* To test run: ` npm test insertSort.test`
-* [The code](../selectionSort/selectionSort.js)
+* To test run: ` npm test mergeSort.test`
+* [The code](../mergeSort/mergeSort.js)
