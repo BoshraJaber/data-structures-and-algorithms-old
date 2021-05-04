@@ -21,10 +21,12 @@ Create a function that sort by insertion.go over the output of this function ste
 
 ## Solution
 
-![](assets/../../assets/insertionSort/insertionSort.png)
+![](assets/../../assets/qickSortExample.png)
+
+![](assets/../../assets/quickSort.png)
 
 ## Resources:
-* [Quick Sort](https://www.geeksforgeeks.org/insertion-sort/)
+* [Quick Sort](https://www.geeksforgeeks.org/quick-sort/)
 
 ## The Code:
 * To test run: `npm test QuickSort.test`
