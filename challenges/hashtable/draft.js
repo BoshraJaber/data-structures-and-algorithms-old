@@ -44,3 +44,25 @@ class HashTable{
         }
     }
 }
+
+
+find(key) {
+    let hash = this.getHash(key);
+
+    if (this.contains(key)) {
+
+        if (this.table[hash].head) {
+            let current = this.table[hash].head;
+            if (Object.keys(current.value)[0] === key) {
+                return current.value[key];
+            }
+            while (current.next) {
+                current = current.next;
+                if (Object.keys(current.value)[0] === key) {
+                    return current.value[key];
+                }
+            }
+        }
+    }
+    return null;
+}
