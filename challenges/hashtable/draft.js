@@ -1,7 +1,3 @@
-'use strict';
-const LinkedList = require('../Data-Structures/linkedList/linked-list').LinkedList;
-
-
 class HashTable{
     constructor(size){
         this.size = size;
@@ -29,18 +25,12 @@ class HashTable{
     get(key){
         if(this.contains(key)){
             let hash = this.hash(key);
-            // Check if the Linked List empty
-            if(this.table[hash].head){
-                let current = this.table[hash].head;
-            }
             let current = this.table[hash].head;
             while(current){
                 if (Object.keys(current.value)[0] === key) return current.value[key]
                 current = current.next;
-                console.log(current)
             }
-            console.log('Get function',this.table);
-            return current;
+            return value;
         } else {
             return "Key already exists"
         }
@@ -54,9 +44,3 @@ class HashTable{
         }
     }
 }
-
-
-
-
-
-module.exports = HashTable;

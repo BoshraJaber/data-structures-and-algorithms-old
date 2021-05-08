@@ -13,7 +13,11 @@ Implement a Hashtable with in JavaScript Code (add(), getHash(), contain(), get(
    - Hash the key to get the index of where to add.
    - check if the table already contain a key, if yes, do nothing.
    - Store the key-value pair in the table array of the index resulted from hashing the key.
-2. getHash()
+2. hash():
+   - we have to generate a unique hash value for the array by getting the ascii code, Since it is a string we need to loop over the string.
+   - calculate the asci to turn a string to a number
+   - we can multiple it by any number but it is better be a primary number to reduce the collision 
+   - divide to make sure the hash is within the size of the array
 3. contain()
-4. get()
+4. get(): check if the key exists first, then 
 <!-- Description of each method publicly available in each of your hashtable -->
