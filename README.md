@@ -25,5 +25,7 @@ challenges and implementations :
 | Code Challenge 28 | [Quick Sort](./challenges/QuickSort/QuickSort.js) |
 | Code Challenge 30 | [Hash Tables ](./challenges/hashtable/hashtable.js) |
 | Code Challenge 31 | [ Repeated word](./challenges/repeatedWord/repeated-word.js) |
+| Code Challenge 32 | [ Tree Intersection](./challenges/treeIntersection/tree-intersection.js) |
+
 
 ![](https://cdn.lynda.com/course/2870041/2870041-637490973662894088-16x9.jpg)

@@ -169,31 +169,3 @@ module.exports = {
     Node: Node,
     BinarySearchTree: BinarySearchTree,
 }
-
-
-//========================
-// breadthFirst(){
-//     const results = [];
-//     const rootNodes= [];
-//     rootNodes.push(this.root);
-//     const _traverse = (node) =>{
-//         // const node = this.queue.shift();
-
-//         console.log('root node is      '+rootNodes)
-//         if (node.left) {
-//             console.log(node.left);
-//            this.rootNodes.push(node.left);
-//         }
-//         if (node.right) {
-//            this.rootNodes.push(node.right);
-//         }
-//         this.results.push(node.value);
-//         _traverse(rootNodes.shift())
-//     }
-//     if(this.root == null){
-//         return 'Tree is empty'
-//     }else {
-//         _traverse(rootNodes[0])
-//     }
-//     return results;
-// }

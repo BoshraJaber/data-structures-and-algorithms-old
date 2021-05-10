@@ -3,7 +3,6 @@
 * Binary trees are composed of nodes with each node only have two children the most (left and right).
 * Binary Search Tree is a sorted binary tree where the values that are smaller then the root are located to the left, while the greater values are located to hte right.
 * Breadth-First Traversing: It is traversing through the tree line by line from the root node until the leaves nodes. 
-* 
 
 
 ## Challenge
