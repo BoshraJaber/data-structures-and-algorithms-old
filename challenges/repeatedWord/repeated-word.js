@@ -11,8 +11,8 @@ function repeatedWord(str){
     let arrOfWords = [];
     for(let i = 0; i < arr.length;i++){
         let currentWord = arr[i].toLowerCase();
-        const isRepeated = arrOfWords.includes(currentWord);
-        if(isRepeated){
+
+        if( arrOfWords.includes(currentWord)){
             return currentWord;
         }else{
             arrOfWords.push(currentWord);
