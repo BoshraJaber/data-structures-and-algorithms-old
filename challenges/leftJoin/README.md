@@ -20,10 +20,15 @@ The first parameter is a hashmap that has word strings as keys, and a synonym of
 The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+The approach was to loop through the first hash map and search for matching keys in the second hash map and add the value of the matched keys to the output results.
+* Efficiency
+ - Big O of space: O(n*n)
+ - Big O of time: O(n)
+
+
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](../assets/hashMap.png)
 
 ## Resources:
 * [Hashmap](https://medium.com/@martin.crabtree/javascript-tracking-key-value-pairs-using-hashmaps-7de6df598257)
