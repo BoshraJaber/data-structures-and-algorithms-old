@@ -23,7 +23,7 @@ The second parameter is a hashmap that has word strings as keys, and antonyms of
 The approach was to loop through the first hash map and search for matching keys in the second hash map and add the value of the matched keys to the output results.
 * Efficiency
  - Big O of space: O(n*n)
- - Big O of time: O(n)
+ - Big O of time: O(n*n)
 
 
 
