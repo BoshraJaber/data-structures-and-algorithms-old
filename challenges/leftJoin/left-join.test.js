@@ -5,8 +5,8 @@ const leftJoin = require("./left-join");
 const synonymHashMap = [
   ["fond", "enamored"],
   ["wrath", "anger"],
-  ["diligent", "employed"],
   ["guide", "grab"],
+  ["diligent", "employed"],
   ["flow", "usher"],
 ];
 
@@ -27,8 +27,8 @@ describe("Left Join Two Hashmaps ", () => {
     expect(output).toEqual( [
         [ 'fond', 'enamored', 'averse' ],
         [ 'wrath', 'anger', 'delight' ],
-        [ 'diligent', 'employed', 'idle' ],
         [ 'guide', 'grab', 'follow' ],
+        [ 'diligent', 'employed', 'idle' ],
         [ 'flow', 'usher', null ]
       ]);
   });
