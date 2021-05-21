@@ -27,10 +27,7 @@ challenges and implementations :
 | Code Challenge 31 | [ Repeated word](./challenges/repeatedWord/repeated-word.js) |
 | Code Challenge 32 | [ Tree Intersection](./challenges/treeIntersection/tree-intersection.js) |
 | Code Challenge 33 | [Left Join ](./challenges/leftJoin/left-join.js) |
-| Code Challenge 34 | [ ](./challenges/repeatedWord/repeated-word.js) |
-| Code Challenge 35 | [ ](./challenges/treeIntersection/tree-intersection.js) |
-| Code Challenge 36 | [ ](./challenges/leftJoin/left-join.js) |
-| Code Challenge 37 | [ ](./challenges/treeIntersection/tree-intersection.js) |
-| Code Challenge 38 | [ ](./challenges/leftJoin/left-join.js) |
+| Code Challenge 34 | [ Graphs ](./challenges/graph/graph.js) |
+
 
 ![](https://cdn.lynda.com/course/2870041/2870041-637490973662894088-16x9.jpg)
