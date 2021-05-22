@@ -60,9 +60,6 @@ class Graph {
   Size() {
     return this._adjacencyList.size;
   }
-  isEmpty() {
-    return this._adjacencyList.size > 0 ? false : null;
-  }
 }
 
 const graph = new Graph();
