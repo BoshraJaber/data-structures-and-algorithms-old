@@ -59,7 +59,7 @@ it("should successfully return the graph with one node and one edge", () => {
   // An empty graph properly returns null
   it("should successfully return null when the graph is empty graph", () => {
     let graph = new Graph();
-    expect(graph.isEmpty()).toBeNull();
+    expect(graph.Size()).toBe(0);
   });
 });
 
